@@ -1,3 +1,5 @@
 Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
 "C:/Users/tim/Desktop/monogame-test/monogame-test/monogame-test/Content/dogL.png","C:/Users/tim/Desktop/monogame-test/monogame-test/monogame-test/Content/bin/DesktopGL/Content/dogL.xnb","TextureProcessor","Texture2DContent",1052,16469,0.4002858
 "C:/Users/tim/Desktop/monogame-test/monogame-test/monogame-test/Content/dogR.png","C:/Users/tim/Desktop/monogame-test/monogame-test/monogame-test/Content/bin/DesktopGL/Content/dogR.xnb","TextureProcessor","Texture2DContent",1036,16469,0.01781
+"C:/Users/tim/Desktop/monogame-test/monogame-test/monogame-test/Content/meatball.png","C:/Users/tim/Desktop/monogame-test/monogame-test/monogame-test/Content/bin/DesktopGL/Content/meatball.xnb","TextureProcessor","Texture2DContent",393,4181,0.279528
+"C:/Users/tim/Desktop/monogame-test/monogame-test/monogame-test/Content/Yoster Island.spritefont","C:/Users/tim/Desktop/monogame-test/monogame-test/monogame-test/Content/bin/DesktopGL/Content/Yoster Island.xnb","FontDescriptionProcessor","SpriteFontContent",2019,21538,1.553222

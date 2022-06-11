@@ -6,8 +6,12 @@
   <SourceFiles>
     <File>C:/Users/tim/Desktop/monogame-test/monogame-test/monogame-test/Content/dogL.png</File>
     <File>C:/Users/tim/Desktop/monogame-test/monogame-test/monogame-test/Content/dogR.png</File>
+    <File>C:/Users/tim/Desktop/monogame-test/monogame-test/monogame-test/Content/meatball.png</File>
+    <File>C:/Users/tim/Desktop/monogame-test/monogame-test/monogame-test/Content/Yoster Island.spritefont</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
   </DestFiles>

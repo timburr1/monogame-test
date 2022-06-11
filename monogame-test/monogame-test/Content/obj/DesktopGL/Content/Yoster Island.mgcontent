@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <SourceFile>C:/Users/tim/Desktop/monogame-test/monogame-test/monogame-test/Content/Yoster Island.spritefont</SourceFile>
+  <SourceTime>2022-06-11T12:45:05.5429151-06:00</SourceTime>
+  <DestFile>C:/Users/tim/Desktop/monogame-test/monogame-test/monogame-test/Content/bin/DesktopGL/Content/Yoster Island.xnb</DestFile>
+  <DestTime>2022-06-11T12:46:42.4327582-06:00</DestTime>
+  <Importer>FontDescriptionImporter</Importer>
+  <ImporterTime>2020-08-10T10:17:54-06:00</ImporterTime>
+  <Processor>FontDescriptionProcessor</Processor>
+  <ProcessorTime>2020-08-10T10:17:54-06:00</ProcessorTime>
+  <Parameters>
+    <Key>PremultiplyAlpha</Key>
+    <Value>True</Value>
+  </Parameters>
+  <Parameters>
+    <Key>TextureFormat</Key>
+    <Value>Compressed</Value>
+  </Parameters>
+  <Dependencies />
+  <BuildAsset />
+  <BuildOutput />
+</PipelineBuildEvent>
