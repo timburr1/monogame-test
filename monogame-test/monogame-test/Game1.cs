@@ -10,11 +10,9 @@ namespace monogame_test
     {
         Texture2D dogTexture;
         Vector2 dogPosition;
-        int DOG_SIZE = 64;
 
         Texture2D meatball;
         List<Vector2> meatballPositions;
-        int MEATBALL_SIZE = 32;
         bool meatballFlag = false;
 
         Random random = new Random();
@@ -34,16 +32,8 @@ namespace monogame_test
         }
 
         protected override void Initialize()
-        {         
-            dogPosition = new Vector2(_graphics.PreferredBackBufferWidth / 2, _graphics.PreferredBackBufferHeight / 2);
-            
-            meatballPositions = new List<Vector2>();
-            for(var i=0; i < 6; i++) 
-                meatballPositions.Add(new Vector2(random.Next(0, _graphics.PreferredBackBufferWidth - MEATBALL_SIZE), random.Next(0, _graphics.PreferredBackBufferHeight - MEATBALL_SIZE)));
-
+        { 
             hunger = random.Next(4, 12);
-
-
 
             base.Initialize();
         }
@@ -53,7 +43,12 @@ namespace monogame_test
             _spriteBatch = new SpriteBatch(GraphicsDevice);
 
             dogTexture = Content.Load<Texture2D>("dogR");
+            dogPosition = new Vector2(_graphics.PreferredBackBufferWidth / 2 - dogTexture.Width / 2, _graphics.PreferredBackBufferHeight / 2 - dogTexture.Height / 2);
+
             meatball = Content.Load<Texture2D>("meatball");
+            meatballPositions = new List<Vector2>();
+            for (var i = 0; i < 6; i++)
+                meatballPositions.Add(new Vector2(random.Next(0, _graphics.PreferredBackBufferWidth - meatball.Width), random.Next(0, _graphics.PreferredBackBufferHeight - meatball.Height)));
 
             font = Content.Load<SpriteFont>("Yoster Island");
         }
@@ -61,19 +56,19 @@ namespace monogame_test
         bool checkCollision(Vector2 meatballPosition)
         {
             //dog is above meatball
-            if (dogPosition.Y + DOG_SIZE < meatballPosition.Y)
+            if (dogPosition.Y + dogTexture.Height < meatballPosition.Y)
                 return false;
             
             //dog is below meatball
-            if (meatballPosition.Y + MEATBALL_SIZE < dogPosition.Y)
+            if (meatballPosition.Y + meatball.Height < dogPosition.Y)
                 return false;
 
             //dog is left of meatball
-            if (dogPosition.X + DOG_SIZE < meatballPosition.X)
+            if (dogPosition.X + dogTexture.Width < meatballPosition.X)
                 return false;
 
             //dog is right of meatball
-            if (meatballPosition.X + MEATBALL_SIZE < dogPosition.X)
+            if (meatballPosition.X + meatball.Width < dogPosition.X)
                 return false;
 
             return true;
@@ -90,7 +85,7 @@ namespace monogame_test
             {
                 if(meatballFlag) 
                 {
-                    meatballPositions.Add(new Vector2(random.Next(0, _graphics.PreferredBackBufferWidth - MEATBALL_SIZE), random.Next(0, _graphics.PreferredBackBufferHeight - MEATBALL_SIZE)));
+                    meatballPositions.Add(new Vector2(random.Next(0, _graphics.PreferredBackBufferWidth - meatball.Width), random.Next(0, _graphics.PreferredBackBufferHeight - meatball.Height)));
                     meatballFlag = false;
                 }
             }
@@ -138,21 +133,10 @@ namespace monogame_test
                 _spriteBatch.Draw(meatball, meatballPositions[i], Color.White);
             }
 
-            _spriteBatch.Draw(dogTexture, 
-                dogPosition, 
-                null, 
-                Color.White,
-                0f,
-                new Vector2(dogTexture.Width / 2, dogTexture.Height / 2),
-                Vector2.One,
-                SpriteEffects.None,
-                0f
-            );
-
-            //_spriteBatch.DrawString(font, $"Timer: {gameTime.TotalGameTime.TotalSeconds}", new Vector2(50, 50), Color.White);
-                        
+            _spriteBatch.Draw(dogTexture, dogPosition, Color.White);
+        
             if(hunger > 0)
-                _spriteBatch.DrawString(font, $"Carlos Segundo tiene hambre! El qiere {hunger} mas albondigas.", new Vector2(50, 50), Color.White);
+                _spriteBatch.DrawString(font, $"Carlos Segundo tiene hambre! El quiere {hunger} mas albondigas.", new Vector2(50, 50), Color.White);
             else
                 _spriteBatch.DrawString(font, "Wahoo, Carlos Segundo no tiene hambre ya!", new Vector2(50, 50), Color.White);
             
