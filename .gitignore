@@ -42,3 +42,6 @@ Ankh.NoLoad
 
 # Office Temp Files
 ~$*
+
+/monogame-test/.vs/monogame-test/DesignTimeBuild
+/monogame-test/.vs/monogame-test/v16
