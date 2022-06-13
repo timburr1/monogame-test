@@ -45,3 +45,5 @@ Ankh.NoLoad
 
 /monogame-test/.vs/monogame-test/DesignTimeBuild
 /monogame-test/.vs/monogame-test/v16
+bin
+obj
